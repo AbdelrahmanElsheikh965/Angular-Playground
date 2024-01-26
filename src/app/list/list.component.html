@@ -1,0 +1,25 @@
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        @for (item of todos; track $index) 
+        {
+          <div class="row gy-4">
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>title</h3>
+                <ul>
+                    <li><strong>{{item.title}}</strong></li>
+                    <li><strong>{{item.data}}</strong></li>
+                  </ul>
+                  <button>Delete</button>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+    </section>
+
+  </main>

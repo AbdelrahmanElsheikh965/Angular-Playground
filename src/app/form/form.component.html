@@ -1,0 +1,38 @@
+
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <h1 class="logo"><a href="index.html">TODO FORM</a></h1>
+  </div>
+</header>
+
+<div class="hero hero-single route bg-image"
+  style="background-image: url(assets/img/overlay-bg.jpg)">
+  <div class="overlay-mf"></div>
+  <div class="hero-content display-table">
+    <div class="table-cell">
+      <div class="container">
+         <h2 class="hero-title mb-4">Blog Details</h2> 
+
+        <div class="col-md-4">
+          <div class="widget-sidebar sidebar-search">
+            <h5 class="sidebar-title">Type your todo </h5>
+            <div class="sidebar-content">
+              <form> 
+                <div class="input-group"> 
+                  <input type="text" placeholder="title" class="form-control" #title> &nbsp; &nbsp;
+                  <input type="text" placeholder="data" class="form-control" #data>
+                  <span class="input-group-btn">
+                    <button (click)="addNewItem(title.value, data.value)"  class="btn btn-secondary btn-search" type="button">
+                      <span class="bi bi-plus"></span> 
+                    </button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
