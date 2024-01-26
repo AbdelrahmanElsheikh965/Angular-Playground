@@ -1,3 +1,8 @@
+<!-- From child to parent -->
 <app-form (SendToParent)="has($event)"></app-form>
 
-<app-list [todos]="todosList"></app-list>
+<!-- From parent to child -->
+<app-list 
+    [todos]="todosList"
+    (deleteRequest)="getWhatsNeedToBeDeleted($event)">
+</app-list>

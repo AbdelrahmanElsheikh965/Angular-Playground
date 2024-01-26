@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ToDoType } from '../ToDoType';
 
 @Component({
@@ -11,5 +11,11 @@ import { ToDoType } from '../ToDoType';
 export class ListComponent {
 
   @Input() todos: any;
+
+  @Output() deleteRequest = new EventEmitter<number>();
+
+  emitId(todoIdToBeDeleted: any){
+    this.deleteRequest.emit(todoIdToBeDeleted);
+  }
 
 }

@@ -11,10 +11,12 @@
               <div class="portfolio-info">
                 <h3>title</h3>
                 <ul>
+                  {{item.id}}
+                    <input type="hidden" value="{{item.id}}" #target>
                     <li><strong>{{item.title}}</strong></li>
                     <li><strong>{{item.data}}</strong></li>
                   </ul>
-                  <button>Delete</button>
+                  <button (click)="emitId(target.value)">Delete</button>
                 </div>
               </div>
             </div>

@@ -21,4 +21,9 @@ has(data: ToDoType){
   this.todosList.push(data);
 }
 
+getWhatsNeedToBeDeleted(num: number){
+  this.todosList = this.todosList.filter((todo: any)=> todo.id != num);
+  alert('deleted');
+}
+
 }
